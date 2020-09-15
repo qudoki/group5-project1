@@ -1,0 +1,74 @@
+body {
+    background-color: #1d1e22;
+}
+h1 {
+    color: #d4d4dc;
+    font-size: 85px;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;  
+    font-weight: 100;
+    letter-spacing: -5px;
+    writing-mode: vertical-rl;
+    position: fixed;
+    padding-top: 75px;
+    padding-left: 30px;
+}
+h2 {
+    color: #d4d4dc;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;   
+    font-weight: 100;
+    letter-spacing: 4.75px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 640px;
+    margin-left: 95px;
+}
+p {
+    color: #feda6a;;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;   
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 2px;
+    position: relative;
+    padding-top: 10px;
+}
+.buttons{
+    position: fixed;
+    text-align: center;
+    padding-left: 200px;
+}
+.button {
+    background-color: #1d1e22;
+    color: #d4d4dc;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+.button:hover {
+    color: #feda6a;
+    cursor: pointer;
+}
+.main {
+    border: 1px solid #d4d4dc; 
+    background-color: #d4d4dc;
+    color: black;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    width: 525px;
+    height: 535px;
+    border-radius: 5px;
+    margin-top: 85px;
+    margin-left: 185px;
+    position: fixed;
+}
