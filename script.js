@@ -32,7 +32,7 @@
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 
 //Global Variables
-var spotifyAPIToken = "BQDwKhs5PXP2xaguvErnUFwu_auh-xlUJ3bkLN1gHruS6LkIptaSaTJRergGnkW_OL4suy4QZtbo-2I29ylC482-zBFDXv484Mn9dX_6saWDRfjcpQmUYzRDlb8698o51-xfIzgEF29Utr63_u2R2_iweYBpuw";
+var spotifyAPIToken = "BQCbXXGZubx_1BFJltx8UUYkrS7gauCFZHEjpqTGDTQErw29PrvZMnRl25vRvYJSwf20xATV5xbwP3ey5oa-bmpZk-p0utch1NZRy_6nAK5kzveH65fGYkFbCFL-dKgBBp09IALC5WjfJM6WGQOQL6dd0e-i6Q";
 var songName;
 
 
