@@ -6,5 +6,3 @@
 * Potential API's: Genius (lyrics or information) and Spotify (music snippets).
 
 # Refer to outline for branching/feature names.
-
-Testtest
