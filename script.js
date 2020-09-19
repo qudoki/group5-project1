@@ -62,7 +62,7 @@ $('document').ready(function () {
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 
 //Global Variables
-var spotifyAPIToken = "BQCbXXGZubx_1BFJltx8UUYkrS7gauCFZHEjpqTGDTQErw29PrvZMnRl25vRvYJSwf20xATV5xbwP3ey5oa-bmpZk-p0utch1NZRy_6nAK5kzveH65fGYkFbCFL-dKgBBp09IALC5WjfJM6WGQOQL6dd0e-i6Q";
+var spotifyAPIToken = "BQCyx3dBSe_Kf6A3NJaFDl0mUpX08WccFM5_OxMXGrwaRgVpziRnRGQA_PX6aktbUy1jVz8LP3hQbVq51PgIx13-6BLfSpTuiD4OhhO43EkL6xdGJsFG-YROHmYe9hiqIBfhHxEqPRwCXuNhXtgitDtqpwnd5g";
 var songTitle;
 var songArtist;
 
@@ -83,6 +83,7 @@ function setUpSpotifyPlayer(mood) {
 
   // Ready (means successful)
   player.addListener('ready', (device_id) => {
+    //test track below (carly rae jepsen)
     var trackId = "spotify:track:7xGfFoTpQ2E7fRF5lN10tr"
     // var trackId = getSongForMood(mood, player);
     console.log('Ready with Device ID', device_id);
@@ -343,12 +344,12 @@ function getAuthorization() {
     });
   // exchange auth for access token and refresh tokens
   $.ajax({
-    url: "https://accounts.spotify.com/api/token&grant_type=authorization_code&/authorization endpoint=" + authCode +"&redirect_uri=" + redirectUri,
+    url: "https://accounts.spotify.com/api/token&grant_type=authorization_code&/authorization endpoint=" + authCode + "&redirect_uri=" + redirectUri,
     method: "POST"
-})
-.then(function(response) {
-  console.log(response);
-});
+  })
+    .then(function (response) {
+      console.log(response);
+    });
 }
 
 window.onSpotifyWebPlaybackSDKReady = runWhenSDKPlayerReady;
