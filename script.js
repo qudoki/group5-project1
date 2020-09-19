@@ -1,21 +1,18 @@
-// Document Ready Function
+$('document').ready(function(){
 
 // Variables 
     // References to DOM Elements (HTML)
     // MOOD Buttons
-    // var happyBtn = $("happy-button");
-    // var sadBtn = $("happy-button");
-    // var focusedBtn = $("happy-button");
-    // var excitedBtn = $("happy-button");
-    // var litBtn = $("happy-button");
-    // var spiritualBtn = $("happy-button");
-    // var joyfulBtn = $("happy-button");
-    // var tiredBtn = $("happy-button");
-    // var chillBtn = $("happy-button");
-    // var creativeBtn = $("happy-button");
+    var happyBtn = $("#happy-button");
+    var sadBtn = $("#sad-button");
+    var chillBtn = $("#chill-button");
+    
+
+    // Playback Buttons
+    
 
 var spotifyAPIKey = "BQD-B3lXyyP4fS9VMdrgVGJRJZB0haUcTt5Nfe0nGCPCF-OkM8tGcqWgvsYJ6rSD5Psqg7r3Zb6z6vCQF62hu5gLVSZ8F8CEuPZNmfbsyPnJ2hvEeipyb23NcPa7LbUKH2KWS8ADBAqZY-R1cF1JwnpdTSwmoQ"
-
+var giphyAPIKey = "KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
 
 
 
@@ -25,6 +22,10 @@ var spotifyAPIKey = "BQD-B3lXyyP4fS9VMdrgVGJRJZB0haUcTt5Nfe0nGCPCF-OkM8tGcqWgvsY
     // $.ajax(musicVariable).done(function (response) {
     // 	console.log(response);
     // });
+
+    // .then statement to attach to the html elements
+
+
 
     // Spotify Playback SDK
     window.onSpotifyWebPlaybackSDKReady = () => {
@@ -79,14 +80,34 @@ var spotifyAPIKey = "BQD-B3lXyyP4fS9VMdrgVGJRJZB0haUcTt5Nfe0nGCPCF-OkM8tGcqWgvsY
       });
 
     
-    // Genius?
+    // Second API - Visializer? (GIF , video)
+    // API Ajax Request - Server Side API's
+
+    // GIPHY API  
+    // $.ajax(giphyGIF).done(function (response) {
+    // 	console.log(response);
+    // });
+
+    // .then statement to attach to the html elements
 
 
 
 
 
 // Attaching event listener ("click") to the MOOD Buttons
-    // H
+    // $("moodButton").on("click", function {
 
-// Visualizer Container 
+    // });
 
+
+
+// Attaching event listener ("click") to the Play/Pause Buttons
+    // $("moodButton").on("click", function {
+
+    // });
+
+
+
+
+
+  });
