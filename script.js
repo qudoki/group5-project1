@@ -34,6 +34,7 @@ var giphyAPIKey = "api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
 
     // .then statement to attach to the html elements
     .then(function(response) {
+      $(giphyContainer).text("");
       console.log(happyURL);
       console.log(response);
 
