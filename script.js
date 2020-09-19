@@ -15,7 +15,7 @@ $('document').ready(function(){
     var giphyContainer = $("#gif-container");
     
 
-var spotifyAPIKey = "BQD-B3lXyyP4fS9VMdrgVGJRJZB0haUcTt5Nfe0nGCPCF-OkM8tGcqWgvsYJ6rSD5Psqg7r3Zb6z6vCQF62hu5gLVSZ8F8CEuPZNmfbsyPnJ2hvEeipyb23NcPa7LbUKH2KWS8ADBAqZY-R1cF1JwnpdTSwmoQ"
+var spotifyAPIKey = "BQDRYExCVKTfUQFiFfuSSikFM6zlE7_4tPsrSEGcLVZhuft1f-_buZ8XygHjf415htBbuFYHhcZN9zurv7jqYo8QYvs3wH42fyybnliSQ00DRssGCpEnoJ49eUdFfOMwPVNCYW7Tx-3RMx-sQ-w0XdgnaspKHw"
 var giphyAPIKey = "api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
 
     // GIPHY API  
