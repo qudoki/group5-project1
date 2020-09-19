@@ -130,6 +130,11 @@ function playSongThroughWebAPI(song_uri, player) {
   });
 }
 
+/* function (generateRandNum) {
+  for (i = 0; i < 30; i++)
+    //insert functionality for function to attach number to song
+} */
+
 //This was generated from Spotify based on a query of "sad", we can build objects from these and make a randomizer function that takes from them.
 var moodSadData = {
   "tracks" : {
