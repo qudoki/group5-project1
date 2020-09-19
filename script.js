@@ -9,10 +9,13 @@ $('document').ready(function(){
     
 
     // Playback Buttons
+
+    // Gif Container
+    var giphyContainer = $("#gif-container");
     
 
 var spotifyAPIKey = "BQD-B3lXyyP4fS9VMdrgVGJRJZB0haUcTt5Nfe0nGCPCF-OkM8tGcqWgvsYJ6rSD5Psqg7r3Zb6z6vCQF62hu5gLVSZ8F8CEuPZNmfbsyPnJ2hvEeipyb23NcPa7LbUKH2KWS8ADBAqZY-R1cF1JwnpdTSwmoQ"
-var giphyAPIKey = "api_key:KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
+var giphyAPIKey = "api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
 
 
 
@@ -85,8 +88,9 @@ var giphyAPIKey = "api_key:KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
 
     // GIPHY API  
 
-    var giphyURL = "api.giphy.com/v1/gifs/random";
-    var happyURL = giphyURL + giphyAPIKey + "tag:happy";
+    var giphyURL = "api.giphy.com/v1/gifs/random?";
+    // var happyURL = giphyURL + giphyAPIKey + "tag=happy";
+    var happyURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=happy";
 
     $(happyBtn).on("click", function(event) {
       event.preventDefault();
@@ -101,10 +105,24 @@ var giphyAPIKey = "api_key:KNlTgJabkqAK66NkPnBuEEWTVntHdFAb"
       console.log(happyURL);
       console.log(response);
 
+      var imageUrl = response.data.image_original_url;
+
+      // Creating and storing an image tag
+      var happyImage = $("<img>");
+
+      // Setting the catImage src attribute to imageUrl
+      happyImage.attr("src", imageUrl);
+      happyImage.attr("alt", "cat image");
+
+      // Prepending the catImage to the images div
+      $(giphyContainer).prepend(happyImage);
+
 
     });
 
   });
+
+  
 
 
 
