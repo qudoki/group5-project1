@@ -1,3 +1,5 @@
+var songTitle = $("#title");
+var songArtist = $("#artist");
 var moodSadData = {
     "tracks": {
         "href": "https://api.spotify.com/v1/search?query=sad&type=track&market=US&offset=0&limit=10",
@@ -724,3 +726,9 @@ var moodSadData = {
         "total": 100006
     }
 }  
+
+// Note that the 3 below is hard coded in, please change to random variable when finished
+console.log(moodSadData.tracks.items[3].artists[0].name);
+console.log(moodSadData.tracks.items[3].name)
+songArtist.text("Artist: " + moodSadData.tracks.items[3].artists[0].name);
+songTitle.text("Title: " + moodSadData.tracks.items[3].name);
