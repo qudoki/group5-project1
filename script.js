@@ -60,7 +60,7 @@ $('document').ready(function () {
 var spotifyAPIToken = "BQCaBISn3dfE2IG2JdOoNzNIN_bNUTlrd5AJWTnj17zwPtj1Vweicd4bdhOHaj_2M-s_Hlya1PNycXb2EhfSJOZX1Q7qKlSCnPEDJv4PIvbwdZfJG5d8E7R9iC0MmxFJZyUvNlPcRErsDDchClT3UCrTZt8Y6Q";
 var songTitle = $("#title");
 var songArtist = $("#artist");
-
+var trackId;
 
 function setUpSpotifyPlayer(mood) {
   var player = new Spotify.Player({
@@ -79,7 +79,7 @@ function setUpSpotifyPlayer(mood) {
   // Ready (means successful)
   player.addListener('ready', (device_id) => {
     //test track below (carly rae jepsen)
-    var trackId = "spotify:track:7xGfFoTpQ2E7fRF5lN10tr"
+    trackId = "spotify:track:7xGfFoTpQ2E7fRF5lN10tr"
     // var trackId = getSongForMood(mood, player);
     console.log('Ready with Device ID', device_id);
     playSongThroughWebAPI(trackId, player);
@@ -156,7 +156,6 @@ function getAuthorization() {
   $.ajax({
     url: "https://accounts.spotify.com/authorize" + "&client_id=" + appClientId + "&response_type=code&redirect_uri=" + redirectUri,
     method: "GET"
-    //Above, the state, scope and show dialog is optional
   })
 
     // .then statement to return auth code (this is not working)
