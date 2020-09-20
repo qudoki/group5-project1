@@ -129,10 +129,12 @@ function playSongThroughWebAPI(song_uri, player) {
 }
 
 function getRndInteger() {
-  var randomInteger = Math.floor(Math.random() * 30);
+  var randomInteger = Math.floor(Math.random() * 10);
   console.log(randomInteger);
   // tracks.items[randomInteger]...........uri
+  tracks.items[parseInt(randomInteger)].uri
 }
+
 
 //See other JS files for 10 generated songs each, make sure to adjust the above function
 $.getScript("happysongs.js", function() {
