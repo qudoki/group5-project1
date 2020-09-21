@@ -79,6 +79,10 @@ function setUpSpotifyPlayer(mood) {
   // Ready (means successful)
   player.addListener('ready', (device_id) => {
     console.log(moodSadData);
+    //Function to get song plus data by mood
+
+    //Render song data on the page.
+
     //test track below (carly rae jepsen)
     trackId = "spotify:track:7xGfFoTpQ2E7fRF5lN10tr"
     // var trackId = getSongForMood(mood, player);
@@ -130,19 +134,20 @@ function playSongThroughWebAPI(song_uri, player) {
 }
 
 function getRndInteger() {
-  var randomInteger = Math.floor(Math.random() * 30);
+  var randomInteger = Math.floor(Math.random() * 10);
   console.log(randomInteger);
   // tracks.items[randomInteger]...........uri
 }
 
+
 //See other JS files for 10 generated songs each, make sure to adjust the above function
-$.getScript("happysongs.js", function() {
+$.getScript("happysongs.js", function () {
   console.log("Script loaded but not executed.");
 });
-$.getScript("sadsongs.js", function() {
+$.getScript("sadsongs.js", function () {
   console.log("Script loaded but not executed.");
 });
-$.getScript("chillsongs.js", function() {
+$.getScript("chillsongs.js", function () {
   console.log("Script loaded but not executed.");
 });
 
