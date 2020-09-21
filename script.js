@@ -17,6 +17,7 @@ $('document').ready(function () {
 
   // GIPHY API  
   var giphyURL = "api.giphy.com/v1/gifs/random?";
+
   // var happyURL = giphyURL + giphyAPIKey + "tag=happy";
   var happyURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=happy";
 
@@ -52,7 +53,79 @@ $('document').ready(function () {
   });
 
 
-});
+
+  // sad giphy ajax request
+  var sadURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=sad";
+
+  $(sadBtn).on("click", function (event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: sadURL,
+      method: "GET"
+    })
+
+      // .then statement to attach to the html elements
+      .then(function (response) {
+        $(giphyContainer).text("");
+        console.log(sadURL);
+        console.log(response);
+
+        var imageUrl = response.data.image_original_url;
+
+        // Creating and storing an image tag
+        var sadImage = $("<img>");
+
+        // Setting the catImage src attribute to imageUrl
+        sadImage.attr("src", imageUrl);
+        sadImage.attr("alt", "sad image");
+
+        // Prepending the catImage to the images div
+        $(giphyContainer).prepend(sadImage);
+
+
+      });
+
+  });
+
+
+
+  // chillBtn ajax request 
+  var chillURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=chill";
+
+  $(chillBtn).on("click", function (event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: chillURL,
+      method: "GET"
+    })
+
+      // .then statement to attach to the html elements
+      .then(function (response) {
+        $(giphyContainer).text("");
+        console.log(happyURL);
+        console.log(response);
+
+        var imageUrl = response.data.image_original_url;
+
+        // Creating and storing an image tag
+        var chillImage = $("<img>");
+
+        // Setting the catImage src attribute to imageUrl
+        chillImage.attr("src", imageUrl);
+        chillImage.attr("alt", "cat image");
+
+        // Prepending the catImage to the images div
+        $(giphyContainer).prepend(chillImage);
+
+
+      });
+
+  });
+
+
+
 
 
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
@@ -133,7 +206,10 @@ function getRndInteger() {
   console.log(randomInteger);
   // tracks.items[randomInteger]...........uri
   tracks.items[parseInt(randomInteger)].uri
+
+  console.log(tracks)
 }
+getRndInteger();
 
 
 //See other JS files for 10 generated songs each, make sure to adjust the above function
@@ -177,3 +253,4 @@ function getAuthorization() {
 
 window.onSpotifyWebPlaybackSDKReady = runWhenSDKPlayerReady;
 
+});
