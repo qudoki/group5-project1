@@ -57,7 +57,7 @@ $('document').ready(function () {
 
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 //Global Variables for Spotify Player
-var spotifyAPIToken = "BQCaBISn3dfE2IG2JdOoNzNIN_bNUTlrd5AJWTnj17zwPtj1Vweicd4bdhOHaj_2M-s_Hlya1PNycXb2EhfSJOZX1Q7qKlSCnPEDJv4PIvbwdZfJG5d8E7R9iC0MmxFJZyUvNlPcRErsDDchClT3UCrTZt8Y6Q";
+var spotifyAPIToken = "BQAaidnmNqmr4ieXmF2HlVFo_ueeIqo5uASpDHDn8DBrm-V3oUazFiepBLqvMu_wb-wO2AszkeQvQY_qghtmNIJSAUf8MpkCVQ4NnLN0_ajbfDrLDVs-Dr45zxuyu0VH1411ds0Pz3_5uoafpCKodWw8xEuCJw";
 var songTitle = $("#title");
 var songArtist = $("#artist");
 var trackId;
@@ -78,6 +78,7 @@ function setUpSpotifyPlayer(mood) {
 
   // Ready (means successful)
   player.addListener('ready', (device_id) => {
+    console.log(moodSadData);
     //test track below (carly rae jepsen)
     trackId = "spotify:track:7xGfFoTpQ2E7fRF5lN10tr"
     // var trackId = getSongForMood(mood, player);
