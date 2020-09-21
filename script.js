@@ -90,14 +90,14 @@ $('document').ready(function () {
 
 
 
-  // var happyURL = giphyURL + giphyAPIKey + "tag=happy";
-  var happyURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=happy";
+  // chillBtn ajax request 
+  var chillURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=chill";
 
-  $(happyBtn).on("click", function (event) {
+  $(chillBtn).on("click", function (event) {
     event.preventDefault();
 
     $.ajax({
-      url: happyURL,
+      url: chillURL,
       method: "GET"
     })
 
@@ -110,14 +110,14 @@ $('document').ready(function () {
         var imageUrl = response.data.image_original_url;
 
         // Creating and storing an image tag
-        var happyImage = $("<img>");
+        var chillImage = $("<img>");
 
         // Setting the catImage src attribute to imageUrl
-        happyImage.attr("src", imageUrl);
-        happyImage.attr("alt", "cat image");
+        chillImage.attr("src", imageUrl);
+        chillImage.attr("alt", "cat image");
 
         // Prepending the catImage to the images div
-        $(giphyContainer).prepend(happyImage);
+        $(giphyContainer).prepend(chillImage);
 
 
       });
