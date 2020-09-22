@@ -1,6 +1,12 @@
-# Group 5 - Project 1
+# Echo Chamber - A Musical Mood Experience
 
-[Project Link] https://github.com/users/qudoki/projects/1
+## Group 5 - Project 1
+
+Click to follow link(s):   
+- [Echo Chamber Deployed App](https://github.com/users/qudoki/projects/1)   
+- [Git Hub Project Link](https://github.com/users/qudoki/projects/1)
+
+
 [Note to Graders] This app will only function with an active Spotify Access Token with an hourly expiration. If you have a Spotify Premium account, please generate a key here: https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#
 And paste it into the SpotifyAPIToken variable. If you do not have a Spotify Premium account, please email qdong327@gmail.com and we will generate and update the key.
 
