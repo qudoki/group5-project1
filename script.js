@@ -57,7 +57,7 @@ $('document').ready(function () {
 
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 //Global Variables for Spotify Player
-var spotifyAPIToken = "BQAaidnmNqmr4ieXmF2HlVFo_ueeIqo5uASpDHDn8DBrm-V3oUazFiepBLqvMu_wb-wO2AszkeQvQY_qghtmNIJSAUf8MpkCVQ4NnLN0_ajbfDrLDVs-Dr45zxuyu0VH1411ds0Pz3_5uoafpCKodWw8xEuCJw";
+var spotifyAPIToken = "BQBepJz7eWAsUXvWSZCniDvp7YGx8NCRfGj0FA16eDaDK5bJJtlo9dpHQ6J0W9d2lQJHALwaxVfSVZ1xHxf0Kw0-uxnP3b0zIJPt_az3n1XFxqdota2AtphZ2l2C3IQkAYrAa0Hf4WdvM651sVhXCajhh1Of-A";
 var songTitle = $("#title");
 var songArtist = $("#artist");
 var trackId;
@@ -67,6 +67,7 @@ function setUpSpotifyPlayer(mood) {
     name: 'Echo Chamber',
     getOAuthToken: cb => { cb(spotifyAPIToken); }
   });
+  console.log(player);
   // Error handling
   player.addListener('initialization_error', ({ message }) => { console.error(message); });
   player.addListener('authentication_error', ({ message }) => { console.error(message); });
@@ -80,7 +81,7 @@ function setUpSpotifyPlayer(mood) {
   player.addListener('ready', (device_id) => {
     console.log(moodSadData);
     //Function to get song plus data by mood
-getRandomSongByMood();
+    getRandomSongByMood();
     //Render song data on the page.
 
     //test track below (carly rae jepsen)
@@ -138,7 +139,7 @@ function getRndInteger() {
   console.log(randomInteger);
   // tracks.items[randomInteger]...........uri
 }
-function getRandomSongByMood (userMood) {
+function getRandomSongByMood(userMood) {
   console.log(userMood);
   console.log(moodSadData);
 }
