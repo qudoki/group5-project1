@@ -1,16 +1,10 @@
 $('document').ready(function () {
 
-  // Variables 
-  // var player;
-
-  // References to DOM Elements (HTML)
+  // Variables / References to DOM Elements (HTML)
   // MOOD Buttons
   var happyBtn = $("#happy-button");
   var sadBtn = $("#sad-button");
   var chillBtn = $("#chill-button");
-
-
-  // Playback Buttons
 
   // Gif Container
   var giphyContainer = $("#gif-container");
@@ -32,14 +26,12 @@ $('document').ready(function () {
       // .then statement to attach to the html elements
       .then(function (response) {
         $(giphyContainer).text("");
-        console.log(happyURL);
         console.log(response);
 
         var randomSong = getRandomSongByMood("happy");
 
         // get random song by mood function
         playSongThroughWebAPI(randomSong.uri, player);
-
         var imageUrl = response.data.image_original_url;
 
         // Creating and storing an image tag
@@ -51,16 +43,8 @@ $('document').ready(function () {
 
         // Prepending the catImage to the images div
         $(giphyContainer).prepend(happyImage);
-
-
-        console.log(moodHappyData);
-
       });
-
   });
-
-
-
 
   // sad giphy ajax request
   var sadURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=sad";
@@ -84,7 +68,6 @@ $('document').ready(function () {
         // get random song by mood function
         playSongThroughWebAPI(randomSong.uri, player);
 
-
         var imageUrl = response.data.image_original_url;
 
         // Creating and storing an image tag
@@ -96,10 +79,7 @@ $('document').ready(function () {
 
         // Prepending the catImage to the images div
         $(giphyContainer).prepend(sadImage);
-
-
       });
-
   });
 
 
@@ -137,13 +117,8 @@ $('document').ready(function () {
 
         // Prepending the catImage to the images div
         $(giphyContainer).prepend(chillImage);
-
-
       });
-
   });
-
-
 
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 //Global Variables for Spotify Player
@@ -153,9 +128,7 @@ var spotifyAPIToken = "BQA8_GDRcNSqM3k8e7vZawOxTti7W9j27NCMFkMc58Zpx8iXv8L6ykc1G
 var songTitle = $("#title");
 var songArtist = $("#artist");
 var trackId;
-
 var player;
-
 
 function setUpSpotifyPlayer(mood) {
   console.log("playerAssigned");
@@ -233,7 +206,6 @@ function playSongThroughWebAPI(song_uri, player) {
   });
 }
 
-
 function getRandomSongByMood(userMood) {
   // console.log(userMood);
 
@@ -242,29 +214,23 @@ function getRandomSongByMood(userMood) {
   if (userMood === "sad") {
     moodArray =  moodSadData.tracks.items;
   }
-
   else if (userMood === "happy") {
     moodArray =  moodHappyData.tracks.items;
   }
-
   else if (userMood === "chill") {
     moodArray =  moodChillData.tracks.items;
-
   }
-
   else {
     moodArray =  moodChillData.tracks.items;
-
   }
   // Returning a random song from the static object
   return moodArray[Math.floor(Math.random() * moodArray.length)];
-
   };
 
 
 //See other JS files for 10 generated songs each, make sure to adjust the above function
 $.getScript("happysongs.js", function() {
-  alert("Script loaded but not executed.");
+  console.log("Script loaded but not executed.");
 });
 
 $.getScript("sadsongs.js", function() {
@@ -272,12 +238,10 @@ $.getScript("sadsongs.js", function() {
 });
 
 $.getScript("chillsongs.js", function() {
-
   console.log("Script loaded but not executed.");
 });
 
 function getSongForMood(mood, player) {
-
 }
 
 //Function to get authorization from Spotify for refresh access tokens, will eventually need to be attached to document ready. Not finished yet.
@@ -303,8 +267,6 @@ function getAuthorization() {
       console.log(response);
     });
 }
-
-
 
 onSpotifyWebPlaybackSDKReady = runWhenSDKPlayerReady;
 });
