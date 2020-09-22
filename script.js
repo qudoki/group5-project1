@@ -1,6 +1,7 @@
 $('document').ready(function () {
 
   // Variables 
+  // var player;
 
   // References to DOM Elements (HTML)
   // MOOD Buttons
@@ -35,6 +36,11 @@ $('document').ready(function () {
         console.log(happyURL);
         console.log(response);
 
+        var randomSong = getRandomSongByMood("happy");
+
+        // get random song by mood function
+        playSongThroughWebAPI(randomSong.uri, player);
+
         var imageUrl = response.data.image_original_url;
 
         // Creating and storing an image tag
@@ -47,6 +53,8 @@ $('document').ready(function () {
         // Prepending the catImage to the images div
         $(giphyContainer).prepend(happyImage);
 
+
+        console.log(moodHappyData);
 
       });
 
@@ -70,6 +78,12 @@ $('document').ready(function () {
         $(giphyContainer).text("");
         console.log(sadURL);
         console.log(response);
+
+        var randomSong = getRandomSongByMood("sad");
+
+        // get random song by mood function
+        playSongThroughWebAPI(randomSong.uri, player);
+
 
         var imageUrl = response.data.image_original_url;
 
@@ -107,6 +121,11 @@ $('document').ready(function () {
         console.log(happyURL);
         console.log(response);
 
+        var randomSong = getRandomSongByMood("chill");
+
+        // get random song by mood function
+        playSongThroughWebAPI(randomSong.uri, player);
+
         var imageUrl = response.data.image_original_url;
 
         // Creating and storing an image tag
@@ -130,16 +149,23 @@ $('document').ready(function () {
 
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 //Global Variables for Spotify Player
-var spotifyAPIToken = "BQCaBISn3dfE2IG2JdOoNzNIN_bNUTlrd5AJWTnj17zwPtj1Vweicd4bdhOHaj_2M-s_Hlya1PNycXb2EhfSJOZX1Q7qKlSCnPEDJv4PIvbwdZfJG5d8E7R9iC0MmxFJZyUvNlPcRErsDDchClT3UCrTZt8Y6Q";
+var spotifyAPIToken = "BQA8_GDRcNSqM3k8e7vZawOxTti7W9j27NCMFkMc58Zpx8iXv8L6ykc1GUwjthdou-h26_ICcoAVUsWg1zZPTShkCK8t1-C8L4sH9zEhZ831h7f1vQrJ0MxdwS7HO0HYknN2cNDsdAM1I5dlEiADHa39vkncuA";
 var songTitle = $("#title");
 var songArtist = $("#artist");
 var trackId;
 
+var player;
+
+
 function setUpSpotifyPlayer(mood) {
-  var player = new Spotify.Player({
+  console.log("playerAssigned");
+  console.log(player);
+  player = new Spotify.Player({
     name: 'Echo Chamber',
     getOAuthToken: cb => { cb(spotifyAPIToken); }
   });
+  
+
   // Error handling
   player.addListener('initialization_error', ({ message }) => { console.error(message); });
   player.addListener('authentication_error', ({ message }) => { console.error(message); });
@@ -174,6 +200,8 @@ function runWhenSDKPlayerReady() {
 
 //Note - url's are a subset of uri - uri is unique to track
 function playSongThroughWebAPI(song_uri, player) {
+  console.log(song_uri, player);
+  
   const play = ({
     spotify_uri,
     playerInstance: {
@@ -201,24 +229,43 @@ function playSongThroughWebAPI(song_uri, player) {
   });
 }
 
-function getRndInteger() {
-  var randomInteger = Math.floor(Math.random() * 10);
-  console.log(randomInteger);
-  // tracks.items[randomInteger]...........uri
-  tracks.items[parseInt(randomInteger)].uri
+function getRandomSongByMood(userMood) {
+  // console.log(userMood);
 
-  console.log(tracks)
-}
-getRndInteger();
+  var moodArray = [];
+
+  if (userMood === "sad") {
+    moodArray =  moodSadData.tracks.items;
+  }
+
+  else if (userMood === "happy") {
+    moodArray =  moodHappyData.tracks.items;
+  }
+
+  else if (userMood === "chill") {
+    moodArray =  moodChillData.tracks.items;
+
+  }
+
+  else {
+    moodArray =  moodChillData.tracks.items;
+
+  }
+  // Returning a random song from the static object
+  return moodArray[Math.floor(Math.random() * moodArray.length)];
+
+  };
 
 
 //See other JS files for 10 generated songs each, make sure to adjust the above function
 $.getScript("happysongs.js", function() {
-  console.log("Script loaded but not executed.");
+  alert("Script loaded but not executed.");
 });
+
 $.getScript("sadsongs.js", function() {
   console.log("Script loaded but not executed.");
 });
+
 $.getScript("chillsongs.js", function() {
   console.log("Script loaded but not executed.");
 });
@@ -251,6 +298,7 @@ function getAuthorization() {
     });
 }
 
-window.onSpotifyWebPlaybackSDKReady = runWhenSDKPlayerReady;
 
+onSpotifyWebPlaybackSDKReady = runWhenSDKPlayerReady;
 });
+var onSpotifyWebPlaybackSDKReady;
