@@ -18,7 +18,6 @@ $('document').ready(function () {
 
   // GIPHY API  
   var giphyURL = "api.giphy.com/v1/gifs/random?";
-
   // var happyURL = giphyURL + giphyAPIKey + "tag=happy";
   var happyURL = "https://api.giphy.com/v1/gifs/random?api_key=KNlTgJabkqAK66NkPnBuEEWTVntHdFAb&tag=happy";
 
@@ -59,6 +58,7 @@ $('document').ready(function () {
       });
 
   });
+
 
 
 
@@ -145,11 +145,11 @@ $('document').ready(function () {
 
 
 
-
-
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 //Global Variables for Spotify Player
+
 var spotifyAPIToken = "BQA8_GDRcNSqM3k8e7vZawOxTti7W9j27NCMFkMc58Zpx8iXv8L6ykc1GUwjthdou-h26_ICcoAVUsWg1zZPTShkCK8t1-C8L4sH9zEhZ831h7f1vQrJ0MxdwS7HO0HYknN2cNDsdAM1I5dlEiADHa39vkncuA";
+
 var songTitle = $("#title");
 var songArtist = $("#artist");
 var trackId;
@@ -164,7 +164,6 @@ function setUpSpotifyPlayer(mood) {
     name: 'Echo Chamber',
     getOAuthToken: cb => { cb(spotifyAPIToken); }
   });
-  
 
   // Error handling
   player.addListener('initialization_error', ({ message }) => { console.error(message); });
@@ -177,6 +176,11 @@ function setUpSpotifyPlayer(mood) {
 
   // Ready (means successful)
   player.addListener('ready', (device_id) => {
+    console.log(moodSadData);
+    //Function to get song plus data by mood
+    getRandomSongByMood();
+    //Render song data on the page.
+
     //test track below (carly rae jepsen)
     trackId = "spotify:track:7xGfFoTpQ2E7fRF5lN10tr"
     // var trackId = getSongForMood(mood, player);
@@ -229,6 +233,7 @@ function playSongThroughWebAPI(song_uri, player) {
   });
 }
 
+
 function getRandomSongByMood(userMood) {
   // console.log(userMood);
 
@@ -267,6 +272,7 @@ $.getScript("sadsongs.js", function() {
 });
 
 $.getScript("chillsongs.js", function() {
+
   console.log("Script loaded but not executed.");
 });
 
@@ -299,6 +305,8 @@ function getAuthorization() {
 }
 
 
+
 onSpotifyWebPlaybackSDKReady = runWhenSDKPlayerReady;
 });
 var onSpotifyWebPlaybackSDKReady;
+
