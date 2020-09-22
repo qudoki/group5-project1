@@ -80,7 +80,7 @@ function setUpSpotifyPlayer(mood) {
   player.addListener('ready', (device_id) => {
     console.log(moodSadData);
     //Function to get song plus data by mood
-
+getRandomSongByMood();
     //Render song data on the page.
 
     //test track below (carly rae jepsen)
@@ -138,7 +138,10 @@ function getRndInteger() {
   console.log(randomInteger);
   // tracks.items[randomInteger]...........uri
 }
-
+function getRandomSongByMood (userMood) {
+  console.log(userMood);
+  console.log(moodSadData);
+}
 
 //See other JS files for 10 generated songs each, make sure to adjust the above function
 $.getScript("happysongs.js", function () {
