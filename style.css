@@ -1,6 +1,8 @@
 body {
     background-color: #1d1e22;
+    width: 100%;
 }
+/* vertical header */
 h1 {
     color: #d4d4dc;
     font-size: 85px;
@@ -13,27 +15,81 @@ h1 {
     writing-mode: vertical-lr;
     position: fixed;
     margin-top: 75px;
-    margin-left: 30px;
-  
+    margin-left: 50px;
 }
+/* "how are you feeling" */
+.subhead {
+color: #feda6a;
+font-size: 12px;
+text-align: center;
+font-family: 'IBM Plex Sans', sans-serif;   
+font-weight: 100;
+letter-spacing: 3px;
+line-height: 2px;
+position: static;
+margin-top: 10px;
+}
+/* modal text */
 p {
-    color: #feda6a;;
+    color: #1d1e22;
     font-size: 12px;
     text-align: center;
     font-family: 'IBM Plex Sans', sans-serif;   
     font-weight: 100;
-    letter-spacing: 3px;
-    line-height: 2px;
+    letter-spacing: 0px;
     position: relative;
     margin-top: 10px;
 }
+/* button alignment */
 .buttons {
     text-align: center;
     width: 100%;
     position: fixed;
+    margin: auto;
     
 }
+/* button text */
 .button {
+    background-color: transparent;
+    color: #d4d4dc;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    border: none;
+    text-decoration: none;
+}
+/* button hover */
+.button:hover {
+    color: #feda6a;
+    cursor: pointer;
+}
+/* main div */
+.main {
+    color: #1d1e22;
+    background-color: #d4d4dc;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    margin-top: 75px;
+    margin-left: 150px;
+    padding: 75px;
+}
+    
+/* gif display */
+.gif {
+    overflow: hidden;
+    display: inline-flex; 
+    max-width: 400px;
+    max-height: 300px;
+}
+/* modal */
+.about {
     background-color: #1d1e22;
     color: #d4d4dc;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -43,26 +99,46 @@ p {
     letter-spacing: 0px;
     border: none;
     text-decoration: none;
-    
+    text-align: center;
+    width: 100%;
+    position: fixed;
 }
-.button:hover {
+.about:hover {
     color: #feda6a;
     cursor: pointer;
 }
-.main {
-    color: #1d1e22;
+.modal {
+    display: none; /* hidden */
+    position: fixed; 
+    z-index: 1; /* pops up on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); /* fallback color */
+    background-color: rgba(0,0,0,0.4); /* black w/ opacity */
+  }
+  /* modal content */
+  .modal-content {
     background-color: #d4d4dc;
-    font-family: 'IBM Plex Sans', sans-serif;
-    border-radius: 5px;
-    width: 400px;
-    height: 400px;
-    margin-top: 75px;
-    margin-left: 150px; 
-    padding: 75px;
-}
-.gif {
-    overflow: hidden;
-    display: inline-flex; 
-    max-width: 400px;
-    max-height: 300px;
-}
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #feda6a;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* close button */
+  .close {
+    color: #1d1e22;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #feda6a;
+    text-decoration: none;
+    cursor: pointer;
+  }
