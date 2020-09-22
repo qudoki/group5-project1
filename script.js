@@ -57,7 +57,7 @@ $('document').ready(function () {
 
 // BELOW: PRIMARY FOCUS IS GENERATING SONG
 //Global Variables for Spotify Player
-var spotifyAPIToken = "BQBepJz7eWAsUXvWSZCniDvp7YGx8NCRfGj0FA16eDaDK5bJJtlo9dpHQ6J0W9d2lQJHALwaxVfSVZ1xHxf0Kw0-uxnP3b0zIJPt_az3n1XFxqdota2AtphZ2l2C3IQkAYrAa0Hf4WdvM651sVhXCajhh1Of-A";
+var spotifyAPIToken = "BQA8_GDRcNSqM3k8e7vZawOxTti7W9j27NCMFkMc58Zpx8iXv8L6ykc1GUwjthdou-h26_ICcoAVUsWg1zZPTShkCK8t1-C8L4sH9zEhZ831h7f1vQrJ0MxdwS7HO0HYknN2cNDsdAM1I5dlEiADHa39vkncuA";
 var songTitle = $("#title");
 var songArtist = $("#artist");
 var trackId;
