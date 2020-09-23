@@ -6,7 +6,7 @@
 ## Group 5 - Project 1   
 
 Click to follow link(s):   
-- [Echo Chamber Deployed App](https://github.com/users/qudoki/projects/1)   
+- [Echo Chamber Deployed App](https://qudoki.github.io/group5-project1/splash.html)   
 - [Git Hub Project Link](https://github.com/users/qudoki/projects/1)
 
 ### Note to Graders:   
@@ -114,7 +114,7 @@ So we began to work in steps:
 Well the best way to find out is to try for yourself! This has been a labor of turmoil and love for our team and we are proud of what we've been able to accomplish in the time given for this project.    
 
 Click to follow link(s):   
-- [Echo Chamber Deployed App](https://github.com/users/qudoki/projects/1)   
+- [Echo Chamber Deployed App](https://qudoki.github.io/group5-project1/splash.html)   
 - [Git Hub Project Link](https://github.com/users/qudoki/projects/1)
 
 
