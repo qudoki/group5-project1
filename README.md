@@ -1,4 +1,7 @@
-# Echo Chamber - A Musical Mood Experience
+# Echo Chamber - A Musical Mood Experience   
+- Composed by: Quinn Dong, Skyler Rencher, Brian Lalbeharry, and Kristen Jacobsen   
+
+<br>
 
 ## Group 5 - Project 1   
 
@@ -102,13 +105,17 @@ So we began to work in steps:
 
 - This API was one of the most difficult things to get working during this project. Spotify's API is so complex with the code and the api authorization token constantly needed to be refresh every hour due to the restrictions. Also the player would only play if the user had a Spotify premium account. We had to find a work-around to allow the player to work even if you don't have a Spotify account. That was a huge challenge. 
 
-- Another challenge with this Spotify APi is that we had to find a way to pull songs from the ajax request and attach them to a randomizer function to respond in accordance with the click events. We defined the function and added it to each function in the mood buttons. We also didn't realize that we had to orient the position of the links to the different script files that we have to where the script.js is located below every other link so that everything could be defined when we are targeting them. 
+- Another challenge with this Spotify API is that we had to find a way to pull songs from the ajax request and attach them to a randomizer function to respond in accordance with the click events. We defined the function and added it to each function in the mood buttons. We also didn't realize that we had to orient the position of the links to the different script files that we have to where the script.js is located below every other link so that everything could be defined when we are targeting them. 
 
 <br>
 
+## How Does Echo Chamber Function?
+
+Well the best way to find out is to try for yourself! This has been a labor of turmoil and love for our team and we are proud of what we've been able to accomplish in the time given for this project.    
+
+Click to follow link(s):   
+- [Echo Chamber Deployed App](https://github.com/users/qudoki/projects/1)   
+- [Git Hub Project Link](https://github.com/users/qudoki/projects/1)
 
 
-
-
-##Site below:
-https://qudoki.github.io/group5-project1/
+## Enjoy Echo Chamber!
