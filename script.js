@@ -233,7 +233,7 @@ $('document').ready(function () {
   function displayData(x,y) {
       if (moodArray = []) {
         songArtist = $(".artist").text("Artist: Carly Rae Jepsen");
-        songTitle = $(".title").text("Title: Run Away With Me";
+        songTitle = $(".title").text("Title: Run Away With Me");
       }
       // songTitle = $(".title").text("blah");
       songArtist = $(".artist").text("Artist: " + (y[x].artists[0].name) + "  ");
