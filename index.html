@@ -19,27 +19,27 @@
 <!-- vertical title -->
     <div style="margin: auto; width: 100%; padding: 10px;">
     <div class="header">
-        <h1 class="title">ECHO CHAMBER</h1>
+        <h1 class="project-title">ECHO CHAMBER</h1>
     </div>
 
 <!-- feeling buttons -->
     <div class="buttons">
         <div class="buttons" style="margin: auto; width: 100%; padding: 10px; position: fixed;">
         <p class="subhead">HOW ARE YOU FEELING?</p>
-        <button id = "sad-button" class="button" style='font-size:50px;'>&#128546;</button>
-        <button id = "happy-button" class="button" style='font-size:50px;'>&#128513;</button>
-        <button id = "chill-button" class="button" style='font-size:50px;'>&#128526;</button>
+        <!-- <button id = "sad-button" class="button" style='font-size:50px;'>&#128546;</button> -->
+        <button id = "sad-button" class="button" style='font-size:50px;'><img class="sad-button" width="75px" src="./icon-sad.png"></button>
+        <!-- <button id = "happy-button" class="button" style='font-size:50px;'>&#128513;</button> -->
+        <button id = "happy-button" class="button" style='font-size:50px;'><img class="sad-button" width="75px" src="./icon-happy.png"></button>
+        <!-- <button id = "chill-button" class="button" style='font-size:50px;'>&#128526;</button> -->
+        <button id = "chill-button" class="button" style='font-size:50px;'><img class="sad-button" width="75px" src="./icon-chill.png"></button>
     </div>
 </div>
 
 <!-- artist/title -->
 <div class="main">
     <div class="player">
-                <marquee id="player" style="float:left;">
-                    Artist:
+                <marquee id="player" class = "hide" style="float:left;">
                     <span class="artist"></span>
-        
-                    Title:
                     <span class="title"></span>
                 </marquee>
                 <br> 
