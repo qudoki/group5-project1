@@ -72,7 +72,7 @@ So we began to work in steps:
 
 <!-- JS Variable Img -->
 <p align="center">
-<img src="assets\img\jsvari1.jpg" alt="javascript code that targets html elements" width = 45% height = 400px>
+<img src="assets\img\jsvari1.jpg" alt="javascript code that targets html elements" width = 60% height = 400px>
 </p>
 
 <br>
@@ -83,12 +83,30 @@ So we began to work in steps:
 
 <!-- Mood Button Ajax Img -->
 <p align="center">
-<img src="assets\img\sadbtn1.jpg" alt="javascript code that targets html elements" width = 45% height = 400px>
+<img src="assets\img\sadbtn1.jpg" alt="javascript code that targets html elements" width = 60% height = 400px>
 </p>
 
 - The sad button ajax call requested sad themed gifs per each click of the button. The same ajax calls were replicated for each mood button <strong>(happy and sad buttons)</strong> to run the same requests for the same effect. 
 
 <br>
+
+- The Spotify API ajax call:
+
+<br>
+
+<!-- Spotify API Imgs -->
+<p align="center">
+<img src="assets\img\spotifyajax.jpg" alt="spotify api ajax call" width = 45% height = 400px>
+<img src="assets\img\spotifyapi1.jpg" alt="spotify api event listeners and more" width = 45% height = 400px>
+</p>
+
+- This API was one of the most difficult things to get working during this project. Spotify's API is so complex with the code and the api authorization token constantly needed to be refresh every hour due to the restrictions. Also the player would only play if the user had a Spotify premium account. We had to find a work-around to allow the player to work even if you don't have a Spotify account. That was a huge challenge. 
+
+- Another challenge with this Spotify APi is that we had to find a way to pull songs from the ajax request and attach them to a randomizer function to respond in accordance with the click events. We defined the function and added it to each function in the mood buttons. We also didn't realize that we had to orient the position of the links to the different script files that we have to where the script.js is located below every other link so that everything could be defined when we are targeting them. 
+
+<br>
+
+
 
 
 
