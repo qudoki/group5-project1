@@ -1,5 +1,66 @@
 body {
     background-color: #1d1e22;
+  animation: fadeInAnimation ease 5s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+} 
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
+} 
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
 }
 /* vertical header */
 h1 {
@@ -27,6 +88,17 @@ letter-spacing: 3px;
 line-height: 2px;
 position: relative;
 margin-top: 5px;
+}
+/* modal text */
+p {
+    color: #1d1e22;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;   
+    font-weight: 100;
+    letter-spacing: 0px;
+    position: relative;
+    margin-top: 10px;
 }
 /* button alignment */
 .buttons {
@@ -57,20 +129,6 @@ padding: 2px;
 box-shadow: 0 0 9px 4px #feda6a; /* glow */
 text-shadow: 0 0 9px 4px #feda6a; /* glow */
 }
-.player {
-    color: #d4d4dc;
-    background-color: transparent; 
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 100;
-    text-transform: uppercase;
-    border-radius: 5px;
-    height: 15px;
-    width: 67%;
-    margin-left: 20%;
-    margin-top: 140px;
-    position: relative;
-}
 /* main div */
 .main {
     color: #1d1e22;
@@ -82,6 +140,7 @@ text-shadow: 0 0 9px 4px #feda6a; /* glow */
     border-radius: 5px;
     width: 50%;
     height: 400px;
+    margin-top: 140px;
     margin-left: 20%;
     padding: 75px; 
 }
@@ -124,11 +183,12 @@ a {
   }
 /* bold text */
 b {
-    color: #feda6a;
+    color: #1d1e22;
+    background-color: #feda6a;
     font-size: 15px;
     text-transform: uppercase;
 }
-/* MODAL */
+/* modal */
 /* about link */
 .about {
     background-color: transparent;
@@ -163,26 +223,16 @@ b {
   }
   /* modal content */
   .modal-content {
-    background-color: #1d1e22;
+    background-color: #d4d4dc;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #feda6a;
     width: 80%; 
   }
-  /* modal text */
-p {
-    color: #d4d4dc;
-    font-size: 12px;
-    text-align: center;
-    font-family: 'IBM Plex Sans', sans-serif;   
-    font-weight: 100;
-    letter-spacing: 0px;
-    position: relative;
-    margin-top: 10px;
-}
+  
   /* close button */
   .close {
-    color: #d4d4dc;
+    color: #1d1e22;
     float: right;
     font-size: 28px;
     font-weight: bold;
