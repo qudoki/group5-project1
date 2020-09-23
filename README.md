@@ -67,9 +67,8 @@ So we began to work in steps:
 - Step 3: Targeting the HTML elements in the script.js file and storing them into variables for reference:
 
 <!-- JS Variable Imgs -->
-<p align="left">
-<img src="assets\img\stylingcss1.jpg" alt="css code that styles the application" width = 45% height = 400px>
-<img src="assets\img\echochamb1.jpg" alt="main content of the application shown in real time" width = 45% height = 400px>
+<p align="center">
+<img src="assets\img\sadbtn1.jpg" alt="javascript code that targets html elements" width = 45% height = 400px>
 </p>
 
 
