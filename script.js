@@ -241,10 +241,7 @@ $.getScript("chillsongs.js", function() {
   console.log("Script loaded but not executed.");
 });
 
-function getSongForMood(mood, player) {
-}
-
-//Function to get authorization from Spotify for refresh access tokens, will eventually need to be attached to document ready. Not finished yet.
+//Function to get authorization from Spotify for refresh access tokens, will eventually need to be attached to document ready. Not finished.
 function getAuthorization() {
   var appClientId = "dbb197ca82bf4b6ab710b4701c2b80df"
   var redirectUri = "https://qudoki.github.io/group5-project1/"
