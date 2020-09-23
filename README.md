@@ -34,6 +34,47 @@ Once the basic foundation was established we pitched the idea and after a "Q & A
 
 <br>
 
+## The Heavy Lifting Begins!
+
+The concept was approved and we were a tad bit naive to the challenge to come. It was at this stage where we started to learn the strengths and weaknesses of our team members. Turns out we got a winning ticket because our team meshed well and we at least were pretty good at communicating which helped in the long run of this process.    
+
+So we began to work in steps:
+
+- Step 1: Gettiing the HTML skeleton from which we all could work from:
+
+<br>
+
+<!-- HTML Skeleton Imgs -->
+<p align="left">
+<img src="assets\img\htmlskeleton1.jpg" alt="html code that generates the main elements of the application" width = 45% height = 400px>
+<img src="assets\img\htmlskeleton2.jpg" alt="html code that generates the main elements of the application" width = 45% height = 400px>
+</p>
+
+<br>
+
+- Step 2: Applying CSS to get the functional spacing and aesthetic of the user interface just right:
+
+<br>
+
+<!-- CSS Styling Imgs -->
+<p align="left">
+<img src="assets\img\stylingcss1.jpg" alt="css code that styles the application" width = 45% height = 400px>
+<img src="assets\img\echochamb1.jpg" alt="main content of the application shown in real time" width = 45% height = 400px>
+</p>
+
+- When that was complete now we could focus on targeting the html elements.
+
+- Step 3: Targeting the HTML elements in the script.js file and storing them into variables for reference:
+
+<!-- JS Variable Imgs -->
+<p align="left">
+<img src="assets\img\stylingcss1.jpg" alt="css code that styles the application" width = 45% height = 400px>
+<img src="assets\img\echochamb1.jpg" alt="main content of the application shown in real time" width = 45% height = 400px>
+</p>
+
+
+
+
 
 
 ##Site below:
