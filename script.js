@@ -123,7 +123,7 @@ $('document').ready(function () {
   // BELOW: PRIMARY FOCUS IS GENERATING SONG
   //Global Variables for Spotify Player
 
-  var spotifyAPIToken = "BQC8tT0dJ-YvTF8yALHEmN_mRML4qtZP9GDk7s_0g_wW_k42oKz_m8J_WMH2O7PCYbJptuqxjfYTqrb3wDrEMfArrrRN9fkKSF_ENdwKJw4zTcfMY-qmFMYuXpoOwPvnaD8nXsbB0z1nAPKHBCP0h2Rejzcb7A";
+  var spotifyAPIToken = "BQBm-Uk-XglXH-56DzsWRM-P_X12_7fy-vWXSakwZea5eBH5XbTIRrmqO9cHo_VMtCSvPJHl_pPAM8K3q7V8DE1EIxbOz7gummJBgCk4sl8B2zyWj20g7S50Nx6aRV5lYyeNAMsGm24AHLY27EOQDGazrCn8yw";
 
   var songTitle = $(".title");
   var songArtist = $(".artist");
@@ -231,10 +231,6 @@ $('document').ready(function () {
   };
 
   function displayData(x,y) {
-      if (moodArray = []) {
-        songArtist = $(".artist").text("Artist: Carly Rae Jepsen");
-        songTitle = $(".title").text("Title: Run Away With Me");
-      }
       // songTitle = $(".title").text("blah");
       songArtist = $(".artist").text("Artist: " + (y[x].artists[0].name) + "  ");
       songTitle = $(".title").text("Title: " + (y[x].name));
