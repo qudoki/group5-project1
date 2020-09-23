@@ -25,6 +25,7 @@
 <!-- feeling buttons -->
     <div class="buttons">
         <div class="buttons" style="margin: auto; width: 100%; padding: 10px; position: fixed;">
+
         <p class="subhead">HOW ARE YOU FEELING?</p><br>
         <button id = "sad-button" class="button"><img class="sad-button" width="75px" src="./icon-sad.png"></button>
         <button id = "happy-button" class="button"><img class="happy-button" width="75px" src="./icon-happy.png"></button>
@@ -35,7 +36,7 @@
 <!-- artist/title -->
     <div class="player">
                 <marquee id="player" class = "hide" style="float:left;">
-                    <span class="artist"></span> &nbsp; &nbsp; &nbsp; &nbsp; 
+                    <span class="artist"></span>
                     <span class="title"></span>
                 </marquee>
                 <br> </div>
@@ -46,7 +47,7 @@
     </div>
     </div>
 </div>
-</div>
+</div>  
 </div>
 
 <!-- "about" modal -->
@@ -60,8 +61,9 @@
       <!-- modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p> <b>An Echo Chamber for your vibe</b><br><br><br>
-            Controllable through your device, ECHO CHAMBER is a mood music <br> Spotify browser extension and accompanying visual experience.<br><br><br>
+        <p> <b> AN ECHO CHAMBER FOR YOUR MOOD. </b><br><br>
+            Controllable through your device, <b>ECHO CHAMBER</b> is a mood music <br> Spotify browser extension and accompanying GIPHY randomizer.<br><br><br>
+            <br><br><br>
             Created by: <br>
             Quinn Dong <br>
             Kristin Jacobsen <br>
@@ -70,9 +72,7 @@
              </p>
       </div>
     </div>
-
-    <!-- script for modal-->
-
+    
     <script>
     // get the modal
     var modal = document.getElementById("myModal");
@@ -92,14 +92,15 @@
     span.onclick = function() {
       modal.style.display = "none";
     }
-
-    // click anywhere outside of the modal to close 
+    
+    // click anywhere outside of the modal, close it
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
     }
     </script>
+
 
 <!-- script links -->
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
