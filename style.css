@@ -3,7 +3,7 @@ body {
 }
 /* vertical header */
 h1 {
-    color: #d4d4dc;
+    color: #feda6a;
     font-size: 85px;
     text-align: center;
     font-family: 'IBM Plex Sans', sans-serif;  
@@ -13,8 +13,8 @@ h1 {
     letter-spacing: -5px;
     writing-mode: vertical-lr;
     position: fixed;
-    margin-top: 75px;
-    margin-left: 50px;
+    margin-top: 140px;
+    margin-left: 7%;
 }
 /* "how are you feeling" */
 .subhead {
@@ -25,8 +25,8 @@ font-family: 'IBM Plex Sans', sans-serif;
 font-weight: 100;
 letter-spacing: 3px;
 line-height: 2px;
-position: relatice;
-margin-top: 10px;
+position: relative;
+margin-top: 5px;
 }
 /* modal text */
 p {
@@ -44,56 +44,96 @@ p {
     text-align: center;
     width: 100%;
     position: fixed;
-    margin: auto;
-    
 }
 /* button text */
 .button {
     background-color: transparent;
-    color: #d4d4dc;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 0px;
     border: none;
     outline: none;
     text-decoration: none;
+    font-size: 1px;
+    font-weight: 100;
+    border-radius: 50%;
+    
 }
-/* button hover */
 .button:hover {
-    color: #feda6a;
-    cursor: pointer;
+background-color: #feda6a;
+z-index: -1; /* behind icon */
+transition: .3s; /* hover animation */
+transform: scale(.9); /* hover animation */
+outline: none;
+border: none;
+text-align: center;
+padding: 2px;
+box-shadow: 0 0 9px 4px #feda6a; /* glow */
+text-shadow: 0 0 9px 4px #feda6a; /* glow */
 }
 /* main div */
 .main {
     color: #1d1e22;
-    background-color: #d4d4dc;
+    background-color: #d4d4dc; 
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 10px;
     font-weight: 100;
     text-transform: uppercase;
     border-radius: 5px;
-    width: 400px;
+    width: 50%;
     height: 400px;
-    margin-top: 75px;
-    margin-left: 150px;
+    margin-top: 140px;
+    margin-left: 20%;
     padding: 75px; 
-    }
+}
 /* gif display */
 .gif {
     overflow: hidden;
     display: inline-flex; 
-    max-width: 425px;
-    max-height: 425px;
-    
+    max-width: 400px;
+    max-height: 400px;
+}
+/* splash page link */
+a {
+    color: #d4d4dc;
+    font-size: 85px;
+    font-family: 'IBM Plex Sans', sans-serif;  
+    font-weight: 100;
+    text-shadow: 10px 1px #feda6a;
+    width: 50%;
+    float: left;
+    letter-spacing: -5px;
+    writing-mode: vertical-lr;
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px; 
+    text-decoration: none;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}  
+@keyframes slidein {
+    from {
+      margin-left: 35%;
+      width: 300%; 
     }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+/* bold text */
+b {
+    color: #1d1e22;
+    background-color: #feda6a;
+    font-size: 15px;
+    text-transform: uppercase;
+}
 /* modal */
+/* about link */
 .about {
-    background-color: #1d1e22;
+    background-color: transparent;
     color: #d4d4dc;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0px;
@@ -102,7 +142,7 @@ p {
     text-decoration: none;
     text-align: center;
     width: 100%;
-    position: fixed;
+    position: relative;
 }
 .about:hover {
     color: #feda6a;
@@ -117,16 +157,16 @@ p {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgb(0,0,0); /* fallback color */
-    background-color: rgba(0,0,0,0.4); /* black w/ opacity */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /* opacity */
   }
   /* modal content */
   .modal-content {
     background-color: #d4d4dc;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #feda6a;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
   }
   
   /* close button */
@@ -136,10 +176,13 @@ p {
     font-size: 28px;
     font-weight: bold;
   }
-  
   .close:hover,
   .close:focus {
     color: #feda6a;
     text-decoration: none;
     cursor: pointer;
   }
+/* responsive media screen */
+  @media screen and (max-width:800px) {
+    h1, .main, a {
+      width:50%;
