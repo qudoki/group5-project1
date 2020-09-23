@@ -64,15 +64,31 @@ So we began to work in steps:
 
 - When that was complete now we could focus on targeting the html elements.
 
+<br>
+
 - Step 3: Targeting the HTML elements in the script.js file and storing them into variables for reference:
 
-<!-- JS Variable Imgs -->
+<br>
+
+<!-- JS Variable Img -->
+<p align="center">
+<img src="assets\img\jsvari1.jpg" alt="javascript code that targets html elements" width = 45% height = 400px>
+</p>
+
+<br>
+
+- Step 4: Creating the Ajax requests for the server-side APIs:
+
+<br>
+
+<!-- Mood Button Ajax Img -->
 <p align="center">
 <img src="assets\img\sadbtn1.jpg" alt="javascript code that targets html elements" width = 45% height = 400px>
 </p>
 
+- The sad button ajax call requested sad themed gifs per each click of the button. The same ajax calls were replicated for each mood button <strong>(happy and sad buttons)</strong> to run the same requests for the same effect. 
 
-
+<br>
 
 
 
